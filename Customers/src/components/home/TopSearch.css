@@ -1,0 +1,134 @@
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the video covers the area */
+  z-index: -1; /* Ensures the video stays behind the content */
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text more readable */
+  z-index: 0; /* Places overlay between the video and the content */
+}
+
+.homepage-search-block {
+  position: relative;
+  height: 100vh; /* Ensures the section takes the full height of the viewport */
+}
+
+/* Title Section */
+.homepage-search-title h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.homepage-search-title h5 {
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* Transparent Search Bar */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent background */
+  border-radius: 8px;
+  padding: 15px;
+  backdrop-filter: blur(5px); /* Adds blur for readability */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
+
+.search-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-item label {
+  font-size: 0.8rem;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+.search-item input,
+.search-item select {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9); /* Slight background for inputs */
+  color: #333; /* Dark text for readability */
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-item input:focus,
+.search-item select:focus {
+  border-color: #d9534f; /* Highlight border on focus */
+}
+
+.search-btn {
+  background-color: #d9534f;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Location Info */
+.text-secondary {
+  color: #6c757d !important;
+  font-size: 0.9rem;
+}
+
+.text-danger {
+  color: #d9534f !important;
+  font-weight: 500;
+}
+
+.text-secondary a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.text-secondary a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .homepage-search-title h1 {
+    font-size: 2rem;
+  }
+
+  .homepage-search-title h5 {
+    font-size: 1rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}

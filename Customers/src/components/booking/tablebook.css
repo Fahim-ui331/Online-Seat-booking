@@ -1,0 +1,24 @@
+.table-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .table-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .animate__fadeIn {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
