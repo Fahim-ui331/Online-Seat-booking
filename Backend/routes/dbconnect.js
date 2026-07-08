@@ -1,12 +1,14 @@
 // dbconnect.js
 const mysql = require("mysql2");
 
-// Create a connection pool
+// Create a connection pool using Environment Variables
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "1234", // MySQL password
-  database: "dinespot", // MySQL database name
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT || 3306,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
@@ -15,11 +17,12 @@ const pool = mysql.createPool({
 // Test the connection
 pool.getConnection((err, connection) => {
   if (err) {
-    console.error("Database connection failed:", err.stack);
+    console.error("Database connection failed:", err.message);
     return;
   }
+
   console.log("Connected to MySQL database.");
-  connection.release(); // Release the connection back to the pool
+  connection.release();
 });
 
 module.exports = pool.promise();
