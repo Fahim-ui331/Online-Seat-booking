@@ -60,17 +60,19 @@ class TopSearch extends React.Component {
                       placeholder="Location, Restaurant, or Cuisine"
                     />
                   </div>
-                  <button className="btn btn-danger search-btn">
-                    Let's Go
+                  <button type="submit" className="btn btn-danger search-btn">
+                      Let's Go
                   </button>
-                </Form>
 
                 <p className="text-secondary mt-2">
-                  It looks like you're in <b>Dhaka Division</b>. Not correct?{" "}
-                  <a href="#" className="text-danger">
-                    Get current location
-                  </a>
-                </p>
+         It looks like you're in <b>Dhaka Division</b>. Not correct?{" "}
+              <button
+                 type="button"
+                 className="btn btn-link text-danger p-0 align-baseline"
+       >
+               Get current location
+          </button>
+          </p>
 
                 <CategoriesCarousel />
               </Col>
