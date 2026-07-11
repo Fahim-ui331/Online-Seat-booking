@@ -29,6 +29,7 @@ class TopSearch extends React.Component {
                     </span>{" "}
                     in Bangladesh
                   </h1>
+
                   <h5 className="mb-5 text-secondary font-weight-normal">
                     Lists of top restaurants, cafes, pubs, and bars in
                     Melbourne, based on trends
@@ -40,6 +41,7 @@ class TopSearch extends React.Component {
                   <div className="search-item">
                     <Form.Control type="date" />
                   </div>
+
                   <div className="search-item">
                     <Form.Control as="select">
                       <option value="19:00">7:00 PM</option>
@@ -47,6 +49,7 @@ class TopSearch extends React.Component {
                       <option value="21:00">9:00 PM</option>
                     </Form.Control>
                   </div>
+
                   <div className="search-item">
                     <Form.Control as="select">
                       <option value="1">1 person</option>
@@ -54,25 +57,31 @@ class TopSearch extends React.Component {
                       <option value="3">3 people</option>
                     </Form.Control>
                   </div>
+
                   <div className="search-item flex-grow-1">
                     <Form.Control
                       type="text"
                       placeholder="Location, Restaurant, or Cuisine"
                     />
                   </div>
-                  <button type="submit" className="btn btn-danger search-btn">
-                      Let's Go
+
+                  <button
+                    type="submit"
+                    className="btn btn-danger search-btn"
+                  >
+                    Let's Go
                   </button>
+                </Form>
 
                 <p className="text-secondary mt-2">
-         It looks like you're in <b>Dhaka Division</b>. Not correct?{" "}
-              <button
-                 type="button"
-                 className="btn btn-link text-danger p-0 align-baseline"
-       >
-               Get current location
-          </button>
-          </p>
+                  It looks like you're in <b>Dhaka Division</b>. Not correct?{" "}
+                  <button
+                    type="button"
+                    className="btn btn-link text-danger p-0 align-baseline"
+                  >
+                    Get current location
+                  </button>
+                </p>
 
                 <CategoriesCarousel />
               </Col>
